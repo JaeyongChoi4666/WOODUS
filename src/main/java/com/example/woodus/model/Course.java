@@ -107,7 +107,6 @@ public class Course {
         private String type;
         private String notice;
 
-
         public ResponseDto(Course course){
             this.id=course.getId();
             this.name=course.getName();
