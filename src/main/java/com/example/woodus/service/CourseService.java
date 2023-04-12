@@ -22,17 +22,17 @@ public class CourseService {
     }
 
     @Transactional
-    public List<Course.ResponseDto> findAll(){
-        return courseRepository.findAll().stream().map(Course.ResponseDto::new).collect(Collectors.toList());
+    public List<Course> searchPresentCourse(){
+        return courseRepository.searchPresentCourse();
     }
 
     @Transactional
-    public List<Course> searchAllCourse(){
-        return courseRepository.searchAllCourse();
-//        return courseRepository.searchAllCourse().stream().map(Course.ResponseDto::new).collect(Collectors.toList());
+    public List<Course> searchOverCourse(){
+        return courseRepository.searchOverCourse();
     }
 
-    public Course searchById(Long id){
-        return courseRepository.getReferenceById(id);
+    public List<Course> searchCourseById(Long id){
+        return courseRepository.searchCourseById(id);
     }
+
 }

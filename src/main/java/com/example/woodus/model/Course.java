@@ -50,7 +50,6 @@ public class Course {
         this.place=place;
         this.type=type;
         this.notice=notice;
-
     }
 
     @Getter
