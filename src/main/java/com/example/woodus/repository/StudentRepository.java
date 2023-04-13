@@ -11,13 +11,13 @@ import java.util.List;
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Long> {
     //SQL part
-    String searchStudentByIdQuery = "select * from student where id = :#{#id}";
-    String searchStudentByCourseIdQuery = "select * from student where course_id = :#{#course_id} order by id desc";
+    String searchStudentByIdQuery = "select * from student where stu_id = :#{#stu_id}";
+    String searchStudentByCourseIdQuery = "select * from student where course_id = :#{#course_id} order by stu_id desc";
 
     //METHOD part
     @Query(value = searchStudentByIdQuery, nativeQuery = true)
-    List<Student> searchStudentById(@Param("id") Long id);
+    List<Student> searchStudentById(@Param("stu_id") Long stu_id);
 
     @Query(value = searchStudentByCourseIdQuery, nativeQuery = true)
-    List<Student> searchStudentByCourseId(@Param("course_id") Long id);
+    List<Student> searchStudentByCourseId(@Param("course_id") Long course_id);
 }

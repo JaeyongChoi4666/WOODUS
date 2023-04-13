@@ -15,39 +15,39 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
+    private Long stu_id;
+    private String stu_name;
     private Long course_id;
-    private String phone;
-    private String address;
+    private String stu_phone;
+    private String stu_address;
 
     @Builder
     public Student(
-            Long id, String name, Long course_id,
-            String phone, String address, String privacyAggr
+            Long stu_id, String stu_name, Long course_id,
+            String stu_phone, String stu_address
     ){
-        this.id=id;
-        this.name=name;
+        this.stu_id=stu_id;
+        this.stu_name=stu_name;
         this.course_id=course_id;
-        this.phone=phone;
-        this.address=address;
+        this.stu_phone=stu_phone;
+        this.stu_address=stu_address;
     }
 
     @Getter
     @Setter
     public static class RequestDto{
 
-        private String name;
+        private String stu_name;
         private Long course_id;
-        private String phone;
-        private String address;
+        private String stu_phone;
+        private String stu_address;
 
         public Student toEntity(){
             return Student.builder()
-                    .name(name)
+                    .stu_name(stu_name)
                     .course_id(course_id)
-                    .phone(phone)
-                    .address(address)
+                    .stu_phone(stu_phone)
+                    .stu_address(stu_address)
                     .build();
         }
     }
@@ -55,18 +55,18 @@ public class Student {
     @Getter
     public static class ResponseDto{
 
-        private Long id;
-        private String name;
+        private Long stu_id;
+        private String stu_name;
         private Long course_id;
-        private String phone;
-        private String address;
+        private String stu_phone;
+        private String stu_address;
 
         public ResponseDto(Student student){
-            this.id=student.getId();
-            this.name=student.getName();
+            this.stu_id=student.getStu_id();
+            this.stu_name=student.getStu_name();
             this.course_id=student.getCourse_id();
-            this.phone=student.getPhone();
-            this.address=student.getAddress();
+            this.stu_phone=student.getStu_phone();
+            this.stu_address=student.getStu_address();
         }
     }
 

@@ -16,16 +16,16 @@ public class StudentService {
 
     @Transactional
     public Long save(Student.RequestDto requestDto){
-        return studentRepository.save(requestDto.toEntity()).getId();
+        return studentRepository.save(requestDto.toEntity()).getStu_id();
     }
 
     @Transactional
-    public List<Student> searchStudentById(Long id){
-        return studentRepository.searchStudentById(id);
+    public List<Student> searchStudentById(Long stu_id){
+        return studentRepository.searchStudentById(stu_id);
     }
 
     @Transactional
-    public List<Student> searchStudentByCourseId(Long id){
-        return studentRepository.searchStudentByCourseId(id);
+    public List<Student> searchStudentByCourseId(Long course_id){
+        return studentRepository.searchStudentByCourseId(course_id);
     }
 }
