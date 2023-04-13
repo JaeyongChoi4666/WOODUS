@@ -8,6 +8,8 @@ import java.sql.Blob;
 @Data
 @Entity(name = "image")
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Image {
 
     @Id

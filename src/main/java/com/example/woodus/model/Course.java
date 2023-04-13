@@ -25,7 +25,7 @@ public class Course {
     private String summary;
     private String place;
     private String week;
-    private Long sumnail_id;
+    private Long thumbnail_id;
     private Long poster_id;
     private String type;
     private String notice;
@@ -106,6 +106,8 @@ public class Course {
         private String week;
         private String type;
         private String notice;
+        private Long thumbnail_id;
+        private Long poster_id;
 
         public ResponseDto(Course course){
             this.id=course.getId();
@@ -122,6 +124,8 @@ public class Course {
             this.week= course.getWeek();
             this.type= course.getType();
             this.notice= course.getNotice();
+            this.thumbnail_id= course.getThumbnail_id();
+            this.poster_id= course.getPoster_id();
 
         }
     }
