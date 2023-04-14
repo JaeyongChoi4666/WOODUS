@@ -28,4 +28,6 @@ public class StudentService {
     public List<Student> searchStudentByCourseId(Long course_id){
         return studentRepository.searchStudentByCourseId(course_id);
     }
+
+
 }
