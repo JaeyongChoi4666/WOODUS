@@ -3,13 +3,12 @@ package com.example.woodus.model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.sql.Blob;
 
 @Data
 @Entity(name = "image")
-@Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
 public class Image {
 
     @Id

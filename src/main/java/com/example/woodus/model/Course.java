@@ -1,8 +1,10 @@
 package com.example.woodus.model;
 
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Data
 @Entity(name="course")
@@ -29,6 +31,9 @@ public class Course {
     private Long poster_id;
     private String type;
     private String notice;
+    @Column
+    @CreationTimestamp
+    private LocalDateTime regdate;
 
     @Builder
     public Course(

@@ -1,11 +1,10 @@
 package com.example.woodus.model;
 
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Data
 @Entity(name="student")
@@ -20,6 +19,9 @@ public class Student {
     private Long course_id;
     private String stu_phone;
     private String stu_address;
+    @Column
+    @CreationTimestamp
+    private LocalDateTime regdate;
 
     @Builder
     public Student(
@@ -60,6 +62,7 @@ public class Student {
         private Long course_id;
         private String stu_phone;
         private String stu_address;
+
 
         public ResponseDto(Student student){
             this.stu_id=student.getStu_id();

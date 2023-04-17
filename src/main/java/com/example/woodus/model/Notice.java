@@ -1,8 +1,10 @@
 package com.example.woodus.model;
 
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Data
 @Entity(name = "notice")
@@ -15,23 +17,26 @@ public class Notice {
     private Long id;
     private String title;
     @Column(length = 512)
-    private String contents;
+    private String content;
+    @Column
+    @CreationTimestamp
+    private LocalDateTime regdate;
 
     @Builder
-    public Notice(Long id, String title, String contents){
+    public Notice(Long id, String title, String content){
         this.id=id;
         this.title=title;
-        this.contents=contents;
+        this.content=content;
     }
 
     @Getter
     @Setter
     public static class RequestDto{
         private String title;
-        private String contents;
+        private String content;
 
         public Notice toEntity(){
-            return Notice.builder().title(title).contents(contents).build();
+            return Notice.builder().title(title).content(content).build();
         }
     }
 
@@ -39,12 +44,12 @@ public class Notice {
     public static class ResponseDto{
         private Long id;
         private String title;
-        private String contents;
+        private String content;
 
         public ResponseDto(Notice notice){
             this.id=notice.getId();
             this.title=notice.getTitle();
-            this.contents=notice.getContents();
+            this.content=notice.getContent();
         }
     }
 }
