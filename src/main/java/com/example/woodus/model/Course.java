@@ -4,7 +4,9 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 @Entity(name="course")
@@ -31,15 +33,13 @@ public class Course {
     private Long poster_id;
     private String type;
     private String notice;
-    @Column
-    @CreationTimestamp
-    private LocalDateTime regdate;
+    private String regdate;
 
     @Builder
     public Course(
         Long id, String name, Long fee, Long num_people, String deadline, String start_date,
         String end_date, String start_time, String end_time, String summary, String week, String type,
-        String notice, String place
+        String notice, String place, String regdate
     ){
         this.id=id;
         this.name=name;
@@ -55,6 +55,7 @@ public class Course {
         this.place=place;
         this.type=type;
         this.notice=notice;
+        this.regdate=regdate;
     }
 
     @Getter
@@ -74,8 +75,13 @@ public class Course {
         private String week;
         private String type;
         private String notice;
+        private String regdate;
 
         public Course toEntity(){
+            Date now = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            String str_now = formatter.format(now);
+
             return Course.builder()
                     .name(name)
                     .fee(fee)
@@ -90,6 +96,7 @@ public class Course {
                     .week(week)
                     .type(type)
                     .notice(notice)
+                    .regdate(str_now)
                     .build();
         }
     }
@@ -113,6 +120,7 @@ public class Course {
         private String notice;
         private Long thumbnail_id;
         private Long poster_id;
+        private String regdate;
 
         public ResponseDto(Course course){
             this.id=course.getId();
@@ -131,7 +139,7 @@ public class Course {
             this.notice= course.getNotice();
             this.thumbnail_id= course.getThumbnail_id();
             this.poster_id= course.getPoster_id();
-
+            this.regdate=course.getRegdate();
         }
     }
 }

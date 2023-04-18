@@ -4,7 +4,9 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 @Entity(name="student")
@@ -19,20 +21,19 @@ public class Student {
     private Long course_id;
     private String stu_phone;
     private String stu_address;
-    @Column
-    @CreationTimestamp
-    private LocalDateTime regdate;
+    private String regdate;
 
     @Builder
     public Student(
             Long stu_id, String stu_name, Long course_id,
-            String stu_phone, String stu_address
+            String stu_phone, String stu_address, String regdate
     ){
         this.stu_id=stu_id;
         this.stu_name=stu_name;
         this.course_id=course_id;
         this.stu_phone=stu_phone;
         this.stu_address=stu_address;
+        this.regdate=regdate;
     }
 
     @Getter
@@ -43,13 +44,19 @@ public class Student {
         private Long course_id;
         private String stu_phone;
         private String stu_address;
+        private String regdate;
 
         public Student toEntity(){
+            Date now = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            String str_now = formatter.format(now);
+
             return Student.builder()
                     .stu_name(stu_name)
                     .course_id(course_id)
                     .stu_phone(stu_phone)
                     .stu_address(stu_address)
+                    .regdate(str_now)
                     .build();
         }
     }
@@ -62,6 +69,7 @@ public class Student {
         private Long course_id;
         private String stu_phone;
         private String stu_address;
+        private String regdate;
 
 
         public ResponseDto(Student student){
@@ -70,6 +78,7 @@ public class Student {
             this.course_id=student.getCourse_id();
             this.stu_phone=student.getStu_phone();
             this.stu_address=student.getStu_address();
+            this.regdate=student.getRegdate();
         }
     }
 
