@@ -68,5 +68,75 @@ public class ImageRepository {
         }
     }
 
+    public int setThumbnailIdinContribution(Long thumbnail_id, Long contribution_id){
+        String sql = "UPDATE contribution SET thumbnail_id = (:thumbnail_id) where id = (:contribution_id)";
+        SqlParameterSource parameter = new MapSqlParameterSource(
+                "thumbnail_id", thumbnail_id)
+                .addValue("contribution_id", contribution_id);
 
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        int result = namedParameterJdbcTemplate.update(sql, parameter, keyHolder);
+
+        return result;
+    }
+
+    public int setContents1IdinContribution(Long contents1_id, Long contribution_id){
+        String sql = "UPDATE contribution SET contents1_id = (:contents1_id) where id = (:contribution_id)";
+        SqlParameterSource parameter = new MapSqlParameterSource(
+                "contents1_id", contents1_id)
+                .addValue("contribution_id", contribution_id);
+
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        int result = namedParameterJdbcTemplate.update(sql, parameter, keyHolder);
+
+        return result;
+    }
+
+    public int setContents2IdinContribution(Long contents2_id, Long contribution_id){
+        String sql = "UPDATE contribution SET contents2_id = (:contents2_id) where id = (:contribution_id)";
+        SqlParameterSource parameter = new MapSqlParameterSource(
+                "contents2_id", contents2_id)
+                .addValue("contribution_id", contribution_id);
+
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        int result = namedParameterJdbcTemplate.update(sql, parameter, keyHolder);
+
+        return result;
+    }
+
+    public int setContents3IdinContribution(Long contents3_id, Long contribution_id){
+        String sql = "UPDATE contribution SET contents3_id = (:contents3_id) where id = (:contribution_id)";
+        SqlParameterSource parameter = new MapSqlParameterSource(
+                "contents3_id", contents3_id)
+                .addValue("contribution_id", contribution_id);
+
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        int result = namedParameterJdbcTemplate.update(sql, parameter, keyHolder);
+
+        return result;
+    }
+
+    public int setContents4IdinContribution(Long contents4_id, Long contribution_id){
+        String sql = "UPDATE contribution SET contents4_id = (:contents4_id) where id = (:contribution_id)";
+        SqlParameterSource parameter = new MapSqlParameterSource(
+                "contents4_id", contents4_id)
+                .addValue("contribution_id", contribution_id);
+
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        int result = namedParameterJdbcTemplate.update(sql, parameter, keyHolder);
+
+        return result;
+    }
+
+    public int setContents5IdinContribution(Long contents5_id, Long contribution_id){
+        String sql = "UPDATE contribution SET contents5_id = (:contents5_id) where id = (:contribution_id)";
+        SqlParameterSource parameter = new MapSqlParameterSource(
+                "contents5_id", contents5_id)
+                .addValue("contribution_id", contribution_id);
+
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        int result = namedParameterJdbcTemplate.update(sql, parameter, keyHolder);
+
+        return result;
+    }
 }

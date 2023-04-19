@@ -25,8 +25,9 @@ public class ApiController {
 
         if (result != null){
             return ResponseEntity.ok(this.courseService.searchCourseById(result));
+        }else {
+            return ResponseEntity.badRequest().build();
         }
-        return ResponseEntity.badRequest().build();
     }
 
     //2. 교육과정(모집중)을 조회

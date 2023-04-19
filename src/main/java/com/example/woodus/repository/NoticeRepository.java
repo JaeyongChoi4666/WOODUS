@@ -12,7 +12,7 @@ import java.util.List;
 public interface NoticeRepository extends JpaRepository<Notice, Long> {
     //SQL part
     String searchAllQuery = "select * from notice order by id";
-    String searchNoticeByIdQuery = "select * from notice where id = :#{id}";
+    String searchNoticeByIdQuery = "select * from notice where id = :#{#id}";
 
 
     //METHOD part
