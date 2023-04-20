@@ -1,0 +1,106 @@
+/* Contribution.js Start */
+.contributionTitle {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 30% 20px 30%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #baa89a;
+}
+.contributionBox {
+    padding: 80px 0;
+    background-color: #faf7f2;
+    min-height: 60.3vh;
+}
+.contributionCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Contribution.js End */
+/* ConCard Start */
+.concardbox {
+    width: 18rem;
+    margin: 25px 0;
+}
+.cardThumbnail {
+    width: 286px;
+    height: 180px;
+}
+.cardSummary {
+    margin: 0;
+}
+.cardDate {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #bebebd;
+}
+.concardbutton {
+    background-color: #ede6db;
+    border: none;
+    color: black;
+}
+.concardbutton:hover {
+    background-color: #baa89a;
+}
+/* ConCard End */
+/* ConDetail.js Start */
+.conDetailBox {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.conDetailTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.conDetailTitle div:first-child {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.conDetailDate {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+.conDetailDate span:first-child {
+    margin-right: 10px;
+}
+
+.conDetailImage {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 50px;
+    margin: 0 150px;
+}
+
+.conDetailImage img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.conDetailImage img:last-child {
+    margin-bottom: 30px;
+}
+
+.conDetailButton {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* ConDetail.js End */

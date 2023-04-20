@@ -1,0 +1,50 @@
+.IntroductionBox {
+    background-color: #faf7f2;
+    padding-bottom: 50px;
+}
+.IntoductionTitle div:first-child {
+    font-size: 36px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+.IntoductionTitle div:nth-child(2) {
+    font-size: 24px;
+}
+.IntroductionContents {
+    margin-top: 30px;
+    line-height: 2.3;
+    width: 80%;
+    font-size: 16px;
+}
+.IntroductionTitle {
+    margin-top: 50px;
+}
+.IntroductionTitleSecond {
+    display: flex;
+    align-items: center;
+}
+.IntroductionTitleSecond div:nth-child(2) {
+    font-size: 24px;
+    margin-left: 20px;
+}
+.IntoductionType {
+    padding-top: 15px;
+    padding-left: 70px;
+    line-height: 2.3;
+}
+.IntoductionImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.IntoductionImageCard {
+    background-color: #ede6db;
+    width: 290px;
+    height: 250px;
+    border-radius: 5px;
+    margin: 0 55px;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

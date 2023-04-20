@@ -1,0 +1,98 @@
+/* Class Start */
+.ClassBox {
+    padding: 80px 0;
+    background-color: #faf7f2;
+    min-height: 60.3vh;
+}
+.HiringProgram {
+    text-align: center;
+    font-size: 2.5rem;
+}
+.ClassCardLine {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.CardItem {
+    margin: 10px;
+}
+/* Class End */
+
+/* Classnav Start */
+.ClassNavBox {
+    border-top: 1px solid #baa89a;
+    border-bottom: 1px solid #baa89a;
+    padding: 20px 0;
+    display: flex;
+    margin: 15px 10%;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+.ClassNavBox > div:hover {
+    cursor: pointer;
+}
+/* Classnav End */
+/* ClassCard Start */
+.ClassCardBox {
+    margin: 15px 0;
+    background-color: #ede6db;
+    width: 330px;
+    height: 460px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.ClassCardBoxEnd {
+    margin: 15px 0;
+    background-color: #cac9c7;
+    width: 330px;
+    height: 460px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.ClassCardBox:hover {
+    border: 2px solid #baa89a;
+    box-shadow: 2px 5px 5px #0000002e;
+    cursor: pointer;
+}
+.CardImageBack {
+    margin: auto;
+    background-color: white;
+    width: 326px;
+    height: 250px;
+    border-radius: 8px 8px 0 0;
+}
+.CardImageBack > img {
+    width: 326px;
+    height: 250px;
+    border-radius: 8px 8px 0 0;
+    border: none;
+}
+.ClassType {
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 10px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+.edu {
+    background-color: #baa89a;
+}
+.exp {
+    background-color: #faf7f2;
+}
+.ClassName {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+.ClassDetail {
+    display: flex;
+}
+.ClassDetail > div {
+    padding: 1px 7px;
+}
+.ClassDetail > div:first-child {
+    padding-left: 20px;
+}
+
+/* ClassCard End */

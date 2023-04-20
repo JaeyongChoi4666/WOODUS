@@ -1,0 +1,36 @@
+.summaryBox {
+    background-color: #ede6db;
+    /* padding-bottom: 60px; */
+}
+.summaryInBox {
+    background-color: #ede6db;
+    display: flex;
+    padding: 30px 0;
+}
+.summaryInBox img {
+    background-color: #ede6db;
+    opacity: 0.9;
+    margin-left: 25px;
+}
+.summaryAbout {
+    font-size: 20px;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+.summaryAbout:after {
+    content: "";
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    height: 3px;
+    width: 20%;
+    border-bottom: 4px solid #baa89a;
+}
+.summaryContents {
+    margin: 40px 63px;
+}
+.summaryContents div:nth-child(2) {
+    padding: 20px 0;
+}

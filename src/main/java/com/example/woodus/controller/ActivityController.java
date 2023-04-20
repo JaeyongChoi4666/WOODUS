@@ -45,15 +45,15 @@ public class ActivityController {
         }
         if(contents2_file != null){
             Image contents2 = new Image(contents2_file.getOriginalFilename(),contents2_file.getContentType(),compressBytes(contents2_file.getBytes()));
-            activityService.addImageAsContents1(contents2, activity_id);
+            activityService.addImageAsContents2(contents2, activity_id);
         }
         if(contents3_file != null){
             Image contents3 = new Image(contents3_file.getOriginalFilename(),contents3_file.getContentType(),compressBytes(contents3_file.getBytes()));
-            activityService.addImageAsContents1(contents3, activity_id);
+            activityService.addImageAsContents3(contents3, activity_id);
         }
         if(contents4_file != null){
             Image contents4 = new Image(contents4_file.getOriginalFilename(),contents4_file.getContentType(),compressBytes(contents4_file.getBytes()));
-            activityService.addImageAsContents1(contents4, activity_id);
+            activityService.addImageAsContents4(contents4, activity_id);
         }
 
         return ResponseEntity.ok(this.activityService.searchActivityById(activity_id));

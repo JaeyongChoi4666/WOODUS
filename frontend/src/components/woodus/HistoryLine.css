@@ -1,0 +1,38 @@
+.historyBox {
+    background-color: #faf7f2;
+    padding-bottom: 50px;
+}
+.historyTitle {
+    padding-top: 20px;
+    margin-bottom: 50px;
+    font-size: 36px;
+    text-align: center;
+}
+.historyContent {
+    margin: auto;
+}
+.historyContentBox {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.historyIcon {
+    margin-right: 25px;
+    position: relative;
+}
+.historyIcon > img {
+    padding-top: 2px;
+}
+.historyIcon > div {
+    position: absolute;
+    top: 9px;
+    left: 31px;
+    font-weight: bold;
+}
+.historyContents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 2;
+    width: 60%;
+}

@@ -1,0 +1,20 @@
+.locationInfoBox {
+    background-color: #ede6db;
+    margin-top: 20px;
+    padding: 30px;
+}
+.locationInfoBox > div {
+    margin: 6px 0;
+}
+.locationInfoDetail {
+    display: flex;
+}
+.locationInfoDetail > div {
+    margin: 10px;
+}
+.locationInfoDetailTitle {
+    display: flex;
+}
+.locationInfoDetailTitle > div {
+    margin-left: 10px;
+}

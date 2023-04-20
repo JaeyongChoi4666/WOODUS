@@ -1,0 +1,24 @@
+.categoryBox {
+    background-color: #baa89a;
+}
+.categoryInBox {
+    background-color: #baa89a;
+    display: flex;
+    justify-content: center;
+    padding: 54px 0;
+}
+.categoryCard {
+    padding: 0 37px;
+    width: 30%;
+}
+.categoryImage {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+}
+.categoryContents {
+    background-color: #ede6db;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 0 0 20px 20px;
+    font-size: 1.1rem;
+}

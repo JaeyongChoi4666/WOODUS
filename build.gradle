@@ -79,6 +79,6 @@ task copyReactBuildFiles(type: Copy) {
 	into "$buildDir/resources/main/static"
 }
 
-tasks.bootJar {
+tasks.war {
 	dependsOn "copyReactBuildFiles"
 }

@@ -1,0 +1,57 @@
+.ProgramDetailBox {
+    padding: 80px 0;
+    background-color: #faf7f2;
+}
+.ProgramDetail {
+    display: flex;
+    justify-content: space-around;
+}
+.DetailLeft {
+    width: 330px;
+}
+.DetailLeft > img {
+    width: 330px;
+    height: 410px;
+    background-color: white;
+}
+.ProgramDetailTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.ProgramDetailInfoBox {
+    margin: 30px 0;
+}
+.ProgramDetailInfo {
+    display: flex;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+.ProgramDetailInfo > div:first-child {
+    background-color: #ede6db;
+    border-radius: 25px;
+    padding: 5px 15px;
+    margin-right: 10px;
+}
+.ProgramDetailInfo > div:nth-child(2) {
+    padding: 5px 15px;
+}
+.ProgramDetailSummary {
+    background-color: #ede6db;
+    margin: 50px 150px;
+    padding: 40px 50px;
+}
+.ProgramDetailButton {
+    text-align: center;
+}
+.ProgramDetailButton > button {
+    border: none;
+    border-radius: 10px;
+    background-color: #ede6db;
+    padding: 8px 20px;
+    margin: 0 20px;
+    font-size: 1.2rem;
+}
+.ProgramDetailButton > button:hover {
+    background-color: #baa89a;
+}

@@ -1,0 +1,41 @@
+.footerBox {
+    background-color: #baa89a;
+    /* position: fixed;
+    bottom: 0; */
+    width: 100%;
+}
+.footerInBox {
+    padding: 30px 0 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.rightFirst {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.rightFirst div:first-child {
+    padding-right: 20px;
+    margin-right: 20px;
+}
+.rightSecond * {
+    margin-bottom: 5px;
+}
+.rightSecond div:last-child {
+    margin-top: 50px;
+}
+.adminModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-backdrop {
+    opacity: 0.5;
+}
+.contactLogo {
+    display: flex;
+}
+.contactLogo > div {
+    margin: 10px 5px 10px 0;
+    width: 80px;
+}

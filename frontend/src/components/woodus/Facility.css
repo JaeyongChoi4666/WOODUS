@@ -1,0 +1,22 @@
+.facilityBox {
+    background-color: #faf7f2;
+    padding: 20px 0;
+}
+.facilityTitle {
+    background-color: #d4bfafbb;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 36px;
+}
+.facilityImage {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.facilityName {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #d4bfafbb;
+}

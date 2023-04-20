@@ -1,0 +1,120 @@
+/* RepairMain Start */
+.RepairMainBox {
+    padding: 100px 0;
+    background-color: #faf7f2;
+    /* height: 60.2vh; */
+}
+.RepairWord {
+    text-align: center;
+    margin: 30px;
+    font-size: 2.3rem;
+}
+.RepairInfo {
+    padding: 0 20px;
+    font-size: 1.7rem;
+}
+.RepairInfo > div {
+    margin: 8px 0;
+}
+.RepairCardBox {
+    display: flex;
+    width: 100%;
+}
+.RepairCard {
+    width: 80%;
+    text-align: center;
+    background-color: #ede6db;
+    margin: 20px;
+}
+.RepairCard > div {
+    font-size: 2rem;
+    padding-top: 15px;
+    font-weight: bold;
+}
+.RepairCard > img {
+    border-radius: 8px;
+}
+.RepairContents {
+    background-color: #ede6db;
+    text-align: center;
+    margin: 20px 20%;
+    padding: 10px;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.RepairList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+}
+.RepairEx {
+    padding-bottom: 100px;
+}
+/* RepairMain End */
+/* RepairFeedback Start */
+.FeedbackBox {
+    padding-top: 61px;
+    background-color: #faf7f2;
+}
+.FeedbackTitle {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 2rem;
+}
+/* RepairFeedback End */
+/* FeedbackCard Start */
+.feedbackdate {
+    padding: 2px 0;
+    margin-bottom: 5px;
+    color: #bebebd;
+}
+.feedbackName {
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 25px;
+    font-size: 2rem;
+}
+.feedbackcardBox {
+    background-color: #ede6db;
+    margin: 0 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.feedbackImageBox {
+    display: flex;
+    justify-content: space-around;
+}
+.beforeAfterBox {
+    border: 3px solid #baa89a;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+.feedbackBoxTitle {
+    background-color: #baa89a;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.feedbackBoxImage {
+    background-color: #ede6db;
+    margin: 30px;
+    height: 100%;
+}
+.feedbackBoxImage > img {
+    height: 100%;
+}
+.feedbackcontent {
+    background-color: #faf7f2;
+    padding: 20px;
+    margin: 20px;
+}
+/* FeedbackCard End */
+/* FeedbackDetail.js Start */
+.RepairDetailBox {
+    padding: 100px 0;
+    background-color: #faf7f2;
+    min-height: 60.5vh;
+}
+/* FeedbackDetail.js End */
