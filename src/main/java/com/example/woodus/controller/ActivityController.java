@@ -1,8 +1,8 @@
 package com.example.woodus.controller;
 
-import com.example.woodus.model.Contribution;
+import com.example.woodus.model.Activity;
 import com.example.woodus.model.Image;
-import com.example.woodus.service.ContributionService;
+import com.example.woodus.service.ActivityService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,65 +18,55 @@ import java.util.zip.Deflater;
 @RestController
 @CrossOrigin
 @AllArgsConstructor
-@RequestMapping("/api/contribution")
-public class ContributionController {
-    private final ContributionService contributionService;
+@RequestMapping("/api/activity")
+public class ActivityController {
+    private final ActivityService activityService;
 
     @PostMapping("")
-    public ResponseEntity<List<Contribution>> createContribution(
+    public ResponseEntity<List<Activity>> createActivity(
             @RequestParam("title")String title,
-            @RequestParam("subtitle")String subtitle,
-            @RequestParam(value = "imageFile_thumbnail", required = false)MultipartFile thumbnail_file,
-            @RequestParam(value = "imageFile_contents1", required = false)MultipartFile contents1_file,
+            @RequestParam("content")String content,
+            @RequestParam("writer")String writer,
+            @RequestParam(value = "imageFile_contents1", required = false) MultipartFile contents1_file,
             @RequestParam(value = "imageFile_contents2", required = false)MultipartFile contents2_file,
             @RequestParam(value = "imageFile_contents3", required = false)MultipartFile contents3_file,
-            @RequestParam(value = "imageFile_contents4", required = false)MultipartFile contents4_file,
-            @RequestParam(value = "imageFile_contents5", required = false)MultipartFile contents5_file
+            @RequestParam(value = "imageFile_contents4", required = false)MultipartFile contents4_file
             )throws IOException {
         Date now = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         String str_now = formatter.format(now);
 
-        Contribution.RequestDto input = new Contribution.RequestDto(title, subtitle, str_now);
-        Long contribution_id = contributionService.save(input);
-
-         if(thumbnail_file != null){
-             Image thumbnail = new Image(thumbnail_file.getOriginalFilename(),thumbnail_file.getContentType(),compressBytes(thumbnail_file.getBytes()));
-             contributionService.addImageAsThumbnail(thumbnail, contribution_id);
-         }
+        Activity.RequestDto input = new Activity.RequestDto(title,content,writer,str_now);
+        Long activity_id = activityService.save(input);
 
         if(contents1_file != null){
             Image contents1 = new Image(contents1_file.getOriginalFilename(),contents1_file.getContentType(),compressBytes(contents1_file.getBytes()));
-            contributionService.addImageAsContents1(contents1,contribution_id);
+            activityService.addImageAsContents1(contents1, activity_id);
         }
         if(contents2_file != null){
             Image contents2 = new Image(contents2_file.getOriginalFilename(),contents2_file.getContentType(),compressBytes(contents2_file.getBytes()));
-            contributionService.addImageAsContents2(contents2,contribution_id);
+            activityService.addImageAsContents1(contents2, activity_id);
         }
         if(contents3_file != null){
             Image contents3 = new Image(contents3_file.getOriginalFilename(),contents3_file.getContentType(),compressBytes(contents3_file.getBytes()));
-            contributionService.addImageAsContents3(contents3,contribution_id);
+            activityService.addImageAsContents1(contents3, activity_id);
         }
         if(contents4_file != null){
             Image contents4 = new Image(contents4_file.getOriginalFilename(),contents4_file.getContentType(),compressBytes(contents4_file.getBytes()));
-            contributionService.addImageAsContents4(contents4,contribution_id);
-        }
-        if(contents5_file != null){
-            Image contents5 = new Image(contents5_file.getOriginalFilename(),contents5_file.getContentType(),compressBytes(contents5_file.getBytes()));
-            contributionService.addImageAsContents5(contents5,contribution_id);
+            activityService.addImageAsContents1(contents4, activity_id);
         }
 
-        return ResponseEntity.ok(this.contributionService.searchContributionById(contribution_id));
+        return ResponseEntity.ok(this.activityService.searchActivityById(activity_id));
     }
 
     @GetMapping("")
-    public ResponseEntity<List<Contribution>> searchAllContribution(){
-        return ResponseEntity.ok(this.contributionService.searchAllContribution());
+    public ResponseEntity<List<Activity>> searchAllActivity(){
+        return ResponseEntity.ok(this.activityService.searchAllActivity());
     }
 
-    @GetMapping("/{contribution_id}")
-    public ResponseEntity<List<Contribution>> searchContributionById(@PathVariable(name="contribution_id") Long contribution_id){
-        return ResponseEntity.ok(this.contributionService.searchContributionById(contribution_id));
+    @GetMapping("/{activity_id}")
+    public ResponseEntity<List<Activity>> searchActivityById(@PathVariable(name="activity_id") Long activity_id){
+        return ResponseEntity.ok(this.activityService.searchActivityById(activity_id));
     }
 
     public static byte[] compressBytes(byte[] data){

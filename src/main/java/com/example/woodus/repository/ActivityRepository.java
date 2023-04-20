@@ -1,6 +1,6 @@
 package com.example.woodus.repository;
 
-import com.example.woodus.model.Contribution;
+import com.example.woodus.model.Activity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -9,15 +9,18 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ContributionRepository extends JpaRepository<Contribution, Long> {
+public interface ActivityRepository extends JpaRepository<Activity, Long> {
     //SQL part
-    String searchAllQuery = "select * from contribution order by id";
-    String searchByIdQuery = "select * from contribution where id = :#{#id}";
+    String searchAllQuery = "select * from activity order by id";
+    String searchByIdQuery = "select * from activity where id = :#{#id}";
 
     //METHOD part
     @Query(value = searchAllQuery, nativeQuery = true)
-    List<Contribution> searchAllContribution();
+    List<Activity> searchAllActivity();
 
     @Query(value = searchByIdQuery, nativeQuery = true)
-    List<Contribution> searchContributionById(@Param("id") Long id);
+    List<Activity> searchActivityById(@Param("id")Long id);
+
+
+
 }

@@ -22,7 +22,7 @@ import java.util.zip.Inflater;
 @RestController
 @CrossOrigin
 @AllArgsConstructor
-@RequestMapping("/images")
+@RequestMapping("/api/images")
 public class FileUploadController {
 
     private final FileService fileService;

@@ -139,4 +139,73 @@ public class ImageRepository {
 
         return result;
     }
+
+    public int setBeforeIdinRepair(Long before_id, Long repair_id){
+        String sql = "UPDATE repair SET before_id = (:before_id) where id = (:repair_id)";
+        SqlParameterSource parameter = new MapSqlParameterSource(
+                "before_id", before_id)
+                .addValue("repair_id", repair_id);
+
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        int result = namedParameterJdbcTemplate.update(sql, parameter, keyHolder);
+
+        return result;
+    }
+
+    public int setAfterIdinRepair(Long after_id, Long repair_id){
+        String sql = "UPDATE repair SET after_id = (:after_id) where id = (:repair_id)";
+        SqlParameterSource parameter = new MapSqlParameterSource(
+                "after_id", after_id)
+                .addValue("repair_id", repair_id);
+
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        int result = namedParameterJdbcTemplate.update(sql, parameter, keyHolder);
+
+        return result;
+    }
+
+    public int setContent1IdinActivity(Long contents1_id, Long activity_id) {
+        String sql = "UPDATE activity SET contents1_id = (:contents1_id) where id = (:activity_id)";
+        SqlParameterSource parameter = new MapSqlParameterSource(
+                "contents1_id", contents1_id)
+                .addValue("activity_id", activity_id);
+
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        int result = namedParameterJdbcTemplate.update(sql, parameter, keyHolder);
+
+        return result;
+    }
+    public int setContent2IdinActivity(Long contents2_id, Long activity_id) {
+        String sql = "UPDATE activity SET contents2_id = (:contents2_id) where id = (:activity_id)";
+        SqlParameterSource parameter = new MapSqlParameterSource(
+                "contents2_id", contents2_id)
+                .addValue("activity_id", activity_id);
+
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        int result = namedParameterJdbcTemplate.update(sql, parameter, keyHolder);
+
+        return result;
+    }
+    public int setContent3IdinActivity(Long contents3_id, Long activity_id) {
+        String sql = "UPDATE activity SET contents3_id = (:contents3_id) where id = (:activity_id)";
+        SqlParameterSource parameter = new MapSqlParameterSource(
+                "contents3_id", contents3_id)
+                .addValue("activity_id", activity_id);
+
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        int result = namedParameterJdbcTemplate.update(sql, parameter, keyHolder);
+
+        return result;
+    }
+    public int setContent4IdinActivity(Long contents4_id, Long activity_id) {
+        String sql = "UPDATE activity SET contents4_id = (:contents4_id) where id = (:activity_id)";
+        SqlParameterSource parameter = new MapSqlParameterSource(
+                "contents4_id", contents4_id)
+                .addValue("activity_id", activity_id);
+
+        KeyHolder keyHolder = new GeneratedKeyHolder();
+        int result = namedParameterJdbcTemplate.update(sql, parameter, keyHolder);
+
+        return result;
+    }
 }
