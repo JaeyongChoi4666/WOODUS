@@ -6,8 +6,18 @@ const ProgramMoreInfo = (props) => {
     const navigate = useNavigate();
     const detail = props.programInfo;
     const beforeWeek = detail.week;
+    const student = props.student;
+
+    const countpeople = student?.length;
+
+    console.log("countpeople", countpeople);
+    console.log("num_people", detail.num_people);
 
     const enrollClass = () => {
+        if (countpeople == detail.num_people) {
+            alert("모집이 마감 되었습니다.");
+            return;
+        }
         alert("신청하겠습니까?");
         navigate(`/class/enroll`);
     };
@@ -31,6 +41,7 @@ const ProgramMoreInfo = (props) => {
         }
         setDay(result);
     }, []);
+
     return (
         <div>
             <div className="ProgramDetail">
@@ -74,6 +85,12 @@ const ProgramMoreInfo = (props) => {
                         <div className="ProgramDetailInfo">
                             <div>신청 기간</div>
                             <div>~ {detail.deadline}</div>
+                        </div>
+                        <div className="ProgramDetailInfo">
+                            <div>모집 인원</div>
+                            <div>
+                                {detail.num_people} / {countpeople}
+                            </div>
                         </div>
                     </div>
                 </div>

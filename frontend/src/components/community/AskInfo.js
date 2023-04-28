@@ -2,7 +2,7 @@ import React from "react";
 import "./community.css";
 import { Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const AskInfo = () => {
     return (
@@ -18,14 +18,18 @@ const AskInfo = () => {
                 <div className="askWay">
                     <div className="askPhone">
                         <FontAwesomeIcon icon={faPhone} />
-                        <div>02 &#41; 1234 - 5678</div>
+                        <div>02 &#41; 3394 - 5525</div>
+                    </div>
+                    <div className="askMail">
+                        <FontAwesomeIcon icon={faEnvelope} />
+                        <div>master@woodus.net</div>
                     </div>
                     <div>
-                        <a href="http://pf.kakao.com/_WIJDxj" target="_blank">
+                        <a href="http://pf.kakao.com/_taxbxkxj" target="_blank">
                             <img src="/pictures/kakaochannel.png" />
                         </a>
                         <a
-                            href="http://pf.kakao.com/_WIJDxj/chat"
+                            href="http://pf.kakao.com/_taxbxkxj/chat"
                             target="_blank"
                         >
                             <img src="/pictures/kakaochannelchat.png" />

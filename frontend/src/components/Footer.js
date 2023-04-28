@@ -25,6 +25,8 @@ const Footer = () => {
                             주소 : 서울특별시 성동구 용답중앙11길 13 어울림빌딩
                             지하1층
                         </div>
+                        <div>Tel : 02 - 3394 - 5525</div>
+                        <div>e-mail : master@woodus.net</div>
                         <div>Copyright ©WOODUS ALL RIGHTS RESERVED. </div>
                     </div>
                 </div>
@@ -33,7 +35,7 @@ const Footer = () => {
                     <div className="contactLogo">
                         <div>
                             <a
-                                href="http://pf.kakao.com/_WIJDxj"
+                                href="http://pf.kakao.com/_taxbxkxj"
                                 target="_blank"
                             >
                                 <img

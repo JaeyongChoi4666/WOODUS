@@ -14,7 +14,7 @@
 }
 .summaryAbout {
     font-size: 20px;
-    margin-top: 50px;
+    margin-top: 10px;
     text-align: center;
     position: relative;
     padding-bottom: 10px;
@@ -30,7 +30,8 @@
 }
 .summaryContents {
     margin: 40px 63px;
+    font-size: 1.3rem;
 }
 .summaryContents div:nth-child(2) {
-    padding: 20px 0;
+    padding: 5px 0;
 }

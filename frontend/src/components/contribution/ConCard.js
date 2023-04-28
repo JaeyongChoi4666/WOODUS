@@ -12,7 +12,7 @@ const ConCard = (data) => {
                 className="cardThumbnail"
             />
             <Card.Body>
-                <Card.Title>{item.title}</Card.Title>
+                <Card.Title className="text-truncate">{item.title}</Card.Title>
                 <Card.Text className="cardSummary text-truncate">
                     {item.subtitle}
                 </Card.Text>

@@ -52,7 +52,7 @@ const ListForm = (props) => {
                                   <td className="listtd">
                                       {person.stu_address}
                                   </td>
-                                  <td className="listtd">{person.date}</td>
+                                  <td className="listtd">{person.regdate}</td>
                               </tr>
                           ))
                         : []}
