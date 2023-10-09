@@ -18,11 +18,24 @@
     padding-right: 20px;
     margin-right: 20px;
 }
-.rightSecond * {
+.rightSecondleft {
     margin-bottom: 5px;
 }
-.rightSecond div:last-child {
+.rightSecond .rightSecondleft div:last-child {
     margin-top: 50px;
+}
+.rightSecond {
+    display: flex;
+}
+.rightSecond div {
+    margin-right: 100px;
+}
+.rightSecondright div:first-child {
+    margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
 }
 .adminModal {
     display: flex;

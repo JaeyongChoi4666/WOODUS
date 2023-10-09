@@ -15,19 +15,40 @@ const Footer = () => {
                         </Link>
                     </div>
                     <div className="rightSecond">
-                        <div>우드어스 사회적협동조합</div>
-                        <div>이사장 : 나유숙</div>
-                        <div>
-                            사업자 등록번호 : 776-82-00307 (제조업,
-                            교육서비스업)
+                        <div className="rightSecondleft">
+                            <div>우드어스 사회적협동조합</div>
+                            <div>이사장 : 나유숙</div>
+                            <div>
+                                사업자 등록번호 : 776-82-00307 (제조업,
+                                교육서비스업)
+                            </div>
+                            <div>
+                                주소 : 서울특별시 성동구 용답중앙11길 13
+                                어울림빌딩 지하1층
+                            </div>
+                            <div>Tel : 02 - 3394 - 5525</div>
+                            <div>e-mail : master@woodus.net</div>
+                            <div>Copyright ©WOODUS ALL RIGHTS RESERVED. </div>
                         </div>
-                        <div>
-                            주소 : 서울특별시 성동구 용답중앙11길 13 어울림빌딩
-                            지하1층
+                        <div className="rightSecondright">
+                            <div>공익위반제보</div>
+                            <div>
+                                <a
+                                    href="https://www.acrc.go.kr/"
+                                    target="_blankr"
+                                >
+                                    국민권익위원회
+                                </a>
+                            </div>
+                            <div>
+                                <a
+                                    href="https://www.nts.go.kr/"
+                                    target="_blank"
+                                >
+                                    국세청
+                                </a>
+                            </div>
                         </div>
-                        <div>Tel : 02 - 3394 - 5525</div>
-                        <div>e-mail : master@woodus.net</div>
-                        <div>Copyright ©WOODUS ALL RIGHTS RESERVED. </div>
                     </div>
                 </div>
                 <div className="Second">
